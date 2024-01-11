@@ -15,6 +15,7 @@ import GoBackBtn from './ui/GoBackBtn';
 
 const Cart = () => {
   const { cart } = useContext(CartContext);
+  const { cartTotal } = useContext(CartContext);
   return (
     <>
       <h2>My Cart</h2>
@@ -36,7 +37,7 @@ const Cart = () => {
             align='right'
             className='animate__animated animate__fadeInUp'
           >
-            Total: &#8377;1,299
+            Total: &#8377;{ cartTotal }
           </Typography>
 
           <Box display='flex' gap justifyContent={'center'} my>
